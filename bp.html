@@ -1,0 +1,62 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+
+  <title>Exercise App</title>
+
+  <link rel="icon" href="img/heart.svg">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+
+
+ <link rel="stylesheet" href="css/bootstrap.css">
+
+ <!-- jQuery library -->
+ <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+ 
+ <!-- Latest compiled JavaScript -->
+ <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+ <script src="js/main.js"></script>
+
+</head>
+
+<body onload="getBP()">
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <a href="index.html">
+      <img src="img/back.png" alt="Smiley face" height="30" width="30" style:"content-align:center;">
+      </a>
+      <a class="navbar-brand m-3" href="index.html">Health</a>
+    </nav>
+    <div class="container mt-3">
+      <form  action="php/addBP.php" method="post">
+        <h1>Enter your blood pressure:</h1>
+        <div class="form-group">
+          <label class="control-label">Systolic</label>
+          <div class="form-group">
+            <div class="input-group mb-3">
+              <input class="form-control" name="sys" id="sys" type="number" required onblur="saveBP()">
+                <div class="input-group-append">
+                  <span class="input-group-text">mm Hg</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="form-group">
+            <label class="control-label">Diastolic</label>
+            <div class="form-group">
+              <div class="input-group mb-3">
+                <input class="form-control" name="dia" id="dia" type="number" required onblur="saveBP()">
+                  <div class="input-group-append">
+                    <span class="input-group-text">mm Hg</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </body>
+  </html>
